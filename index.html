@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fundamental 3 (functions) | The odin project</title>
+</head>
+<style type="text/css">
+body{
+  background: #191919;
+}
+
+div{
+  width: 270px;
+  height: 130px;
+  background: aqua;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+	
+</style>
+
+<body>
+	<div>
+	<h3>Type any number</h3>
+	<input class="numberWrite" type="text">
+		
+	</input>
+	<p></p>
+	</div>
+</body>
+
+<script type="text/javascript">
+var number = document.querySelector('.numberWrite');
+var yourNumber = document.querySelector('p');
+	function add7(num){
+		return num + 7;
+	}
+	number.onchange = function(){
+		var num = number.value;
+		if(isNaN(num)){
+			yourNumber.textContent = 'You need to write a number, sweetheart!';
+		}else{
+			num = +num;
+			yourNumber.textContent = add7(num);
+		}
+	}
+</script>
+</html>
