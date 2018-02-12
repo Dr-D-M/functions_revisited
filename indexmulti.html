@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fundamental 3  (the odin project) | Multiplication</title>
+</head>
+
+<body>
+<h3>Type any number</h3>
+	<input class="numberWrite" type="text">
+		
+	</input>
+	<p></p>
+</body>
+<script type="text/javascript">
+	var number = document.querySelector('.numberWrite');
+	var newNumber = document.querySelector('p');
+
+	function multiply(num){
+		return num * num;
+	}
+
+	number.onchange = function(){
+		var num = number.value;
+		if(isNaN(num)){
+			newNumber.textContent = 'Write a number, Forest, Forest Gump!';
+		}else{
+			num = +num;
+			newNumber.textContent = multiply(num);
+		}
+	}
+</script>
+</html>
