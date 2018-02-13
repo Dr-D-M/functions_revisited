@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Last Letter | Function OP</title>
+</head>
+<body>
+	<div>
+		<h3>Write One Word | And see Last letter</h3>
+		<input class="lastLetter"  type="text" name="ultimate">
+		<p></p>
+	</div>
+
+</body>
+<script type="text/javascript">
+	var word = document.querySelector('.lastLetter');
+	var last = document.querySelector('p');
+
+	function lastLetter(string){
+		return string.charAt(string.length-1);
+	}
+
+	word.onchange = function(){
+		var string = word.value.toString();
+		if(!word){
+			last.textContent = 'write a word, genius';
+		}else{
+			last.textContent = lastLetter(string);
+		}
+	}
+</script>
+</html>
